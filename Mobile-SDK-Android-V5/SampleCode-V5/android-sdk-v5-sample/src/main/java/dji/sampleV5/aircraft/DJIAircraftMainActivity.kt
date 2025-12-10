@@ -6,7 +6,6 @@ import dji.v5.ux.core.communication.GlobalPreferencesManager
 import dji.v5.ux.core.util.UxSharedPreferencesUtil
 import dji.v5.ux.sample.showcase.defaultlayout.DefaultLayoutActivity
 import dji.v5.ux.sample.showcase.widgetlist.WidgetsActivity
-import dji.sampleV5.aircraft.OpenCameraActivity
 
 /**
  * Class Description
@@ -25,6 +24,7 @@ class DJIAircraftMainActivity : DJIMainActivity() {
 
         enableDefaultLayout(DefaultLayoutActivity::class.java)
         enableWidgetList(WidgetsActivity::class.java)
+        enableOpenCameraButton(OpenCameraActivity::class.java) // Added to enable the Open Camera button
         enableOpenCameraButton(OpenCameraActivity::class.java) // Added to enable the Open Camera button
     }
 
