@@ -189,12 +189,6 @@ abstract class DJIMainActivity : AppCompatActivity() {
      * Enables a button to open the camera activity.
      * @param cl The class of the activity to open.
      */
-    fun <T> enableOpenCameraButton(cl: Class<T>) {
-        binding.openCameraButton.setOnClickListener {
-            val intent = Intent(this, cl)
-            startActivity(intent)
-        }
-    }
     fun <T> enableOpenStreamingButton(cl: Class<T>) {
         binding.liveStreamAWS.setOnClickListener {
             val intent = Intent(this, cl)
