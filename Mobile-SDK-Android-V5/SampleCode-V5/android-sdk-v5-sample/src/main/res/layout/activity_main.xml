@@ -129,21 +129,7 @@
                     android:text="@string/showcase"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
-                <Button
-                    android:id="@+id/openCameraButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:foreground="?selectableItemBackground"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginRight="8dp"
-                    android:background="@color/white"
-                    android:enabled="true"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="Open Camera from Phone"
-                    android:textColor="@color/selector_enable_button" />
+                
                 <Button
                     android:id="@+id/liveStreamAWS"
                     android:layout_width="match_parent"
