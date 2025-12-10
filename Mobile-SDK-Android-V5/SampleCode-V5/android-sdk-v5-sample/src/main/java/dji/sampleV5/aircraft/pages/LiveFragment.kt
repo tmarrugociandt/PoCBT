@@ -340,12 +340,13 @@ class LiveFragment : DJIFragment() {
     private fun showSetLiveStreamRtmpConfigDialog() {
         val factory = LayoutInflater.from(requireContext())
         val rtmpConfigView = factory.inflate(R.layout.dialog_livestream_rtmp_config_view, null)
-        val etRtmpUrl = rtmpConfigView.findViewById<EditText>(R.id.et_livestream_rtmp_config)
-        etRtmpUrl.setText(
+        //val etRtmpUrl = rtmpConfigView.findViewById<EditText>(R.id.et_livestream_rtmp_config)
+        //aqui va la url
+        /*etRtmpUrl.setText(
             liveStreamVM.getRtmpUrl().toCharArray(),
             0,
             liveStreamVM.getRtmpUrl().length
-        )
+        )*/
         val configDialog = requireContext().let {
             AlertDialog.Builder(it, androidx.appcompat.R.style.Base_ThemeOverlay_AppCompat_Dialog_Alert)
                 .setIcon(android.R.drawable.ic_menu_camera)
@@ -354,7 +355,7 @@ class LiveFragment : DJIFragment() {
                 .setView(rtmpConfigView)
                 .setPositiveButton(R.string.ad_confirm) { configDialog, _ ->
                     kotlin.run {
-                        val inputValue = etRtmpUrl.text.toString()
+                        val inputValue = "rtmp://18.130.36.142:1935/demo/live"
                         if (TextUtils.isEmpty(inputValue)) {
                             ToastUtils.showToast(emptyInputMessage)
                         } else {

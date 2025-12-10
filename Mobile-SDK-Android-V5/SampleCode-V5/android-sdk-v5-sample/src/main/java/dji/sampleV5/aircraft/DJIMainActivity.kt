@@ -195,6 +195,12 @@ abstract class DJIMainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    fun <T> enableOpenStreamingButton(cl: Class<T>) {
+        binding.liveStreamAWS.setOnClickListener {
+            val intent = Intent(this, cl)
+            startActivity(intent)
+        }
+    }
 
     private fun <T> enableShowCaseButton(view: View, cl: Class<T>) {
         view.isEnabled = true
