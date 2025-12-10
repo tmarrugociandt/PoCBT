@@ -5,10 +5,11 @@
     tools:viewBindingIgnore="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_light_divider_line"
+    android:background="@android:color/holo_blue_light"
     android:orientation="vertical">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:gravity="center_vertical|start"
@@ -461,7 +462,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingTop="4dp"
         android:paddingEnd="16dp">
 
