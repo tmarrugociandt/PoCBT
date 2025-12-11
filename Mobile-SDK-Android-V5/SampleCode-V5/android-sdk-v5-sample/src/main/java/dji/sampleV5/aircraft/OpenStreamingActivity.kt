@@ -11,7 +11,7 @@ class OpenStreamingActivity : AppCompatActivity() {
         // Insert LiveFragment into the container
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, dji.sampleV5.aircraft.pages.LiveFragment())
+                .replace(R.id.fragment_container, dji.sampleV5.aircraft.pages.LiveFragmentCamera())
                 .commit()
         }
     }

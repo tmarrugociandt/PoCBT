@@ -31,7 +31,7 @@ import dji.v5.manager.interfaces.ICameraStreamManager
 import dji.v5.utils.common.NumberUtils
 import dji.v5.utils.common.StringUtils
 
-class LiveFragment : DJIFragment() {
+class LiveFragmentCamera : DJIFragmentCamera() {
     private val cameraStreamManager = MediaDataCenter.getInstance().cameraStreamManager
 
     private val liveStreamVM: LiveStreamVM by viewModels()
@@ -62,7 +62,7 @@ class LiveFragment : DJIFragment() {
     private var cameraStreamScaleType: ICameraStreamManager.ScaleType = ICameraStreamManager.ScaleType.CENTER_INSIDE
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.frag_live, container, false)
+        return inflater.inflate(R.layout.frag_live_camera, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -340,12 +340,13 @@ class LiveFragment : DJIFragment() {
     private fun showSetLiveStreamRtmpConfigDialog() {
         val factory = LayoutInflater.from(requireContext())
         val rtmpConfigView = factory.inflate(R.layout.dialog_livestream_rtmp_config_view, null)
-        val etRtmpUrl = rtmpConfigView.findViewById<EditText>(R.id.et_livestream_rtmp_config)
-        etRtmpUrl.setText(
+        //val etRtmpUrl = rtmpConfigView.findViewById<EditText>(R.id.et_livestream_rtmp_config)
+        //aqui va la url
+        /*etRtmpUrl.setText(
             liveStreamVM.getRtmpUrl().toCharArray(),
             0,
             liveStreamVM.getRtmpUrl().length
-        )
+        )*/
         val configDialog = requireContext().let {
             AlertDialog.Builder(it, androidx.appcompat.R.style.Base_ThemeOverlay_AppCompat_Dialog_Alert)
                 .setIcon(android.R.drawable.ic_menu_camera)
@@ -353,8 +354,8 @@ class LiveFragment : DJIFragment() {
                 .setCancelable(false)
                 .setView(rtmpConfigView)
                 .setPositiveButton(R.string.ad_confirm) { configDialog, _ ->
-                    kotlin.run {
-                        val inputValue = etRtmpUrl.text.toString()
+                    run {
+                        val inputValue = "rtmp://18.130.36.142:1935/demo/live"
                         if (TextUtils.isEmpty(inputValue)) {
                             ToastUtils.showToast(emptyInputMessage)
                         } else {
@@ -365,7 +366,7 @@ class LiveFragment : DJIFragment() {
                     }
                 }
                 .setNegativeButton(R.string.ad_cancel) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         configDialog.dismiss()
                     }
                 }
@@ -407,7 +408,7 @@ class LiveFragment : DJIFragment() {
                 .setCancelable(false)
                 .setView(rtspConfigView)
                 .setPositiveButton(R.string.ad_confirm) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         val inputUserName = etRtspUsername.text.toString()
                         val inputPassword = etRtspPassword.text.toString()
                         val inputPort = etRtspPort.text.toString()
@@ -432,7 +433,7 @@ class LiveFragment : DJIFragment() {
                     }
                 }
                 .setNegativeButton(R.string.ad_cancel) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         configDialog.dismiss()
                     }
                 }
@@ -499,7 +500,7 @@ class LiveFragment : DJIFragment() {
                 .setCancelable(false)
                 .setView(gbConfigView)
                 .setPositiveButton(R.string.ad_confirm) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         val serverIp = etGbServerIp.text.toString()
                         val serverPort = etGbServerPort.text.toString()
                         val serverId = etGbServerId.text.toString()
@@ -534,7 +535,7 @@ class LiveFragment : DJIFragment() {
                     }
                 }
                 .setNegativeButton(R.string.ad_cancel) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         configDialog.dismiss()
                     }
                 }
@@ -566,7 +567,7 @@ class LiveFragment : DJIFragment() {
                 .setCancelable(false)
                 .setView(agoraConfigView)
                 .setPositiveButton(R.string.ad_confirm) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         val channelId = etAgoraChannelId.text.toString()
                         val token = etAgoraToken.text.toString()
                         val uid = etAgoraUid.text.toString()
@@ -583,7 +584,7 @@ class LiveFragment : DJIFragment() {
                     }
                 }
                 .setNegativeButton(R.string.ad_cancel) { configDialog, _ ->
-                    kotlin.run {
+                    run {
                         configDialog.dismiss()
                     }
                 }

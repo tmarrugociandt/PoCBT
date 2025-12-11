@@ -176,6 +176,7 @@ abstract class DJIMainActivity : AppCompatActivity() {
 
     fun <T> enableDefaultLayout(cl: Class<T>) {
         enableShowCaseButton(binding.defaultLayoutButton, cl)
+        // Also enable the PoC stream button at the same time as the default layout button
     }
 
     fun <T> enableWidgetList(cl: Class<T>) {
@@ -190,12 +191,8 @@ abstract class DJIMainActivity : AppCompatActivity() {
      * @param cl The class of the activity to open.
      */
     fun <T> enableOpenStreamingButton(cl: Class<T>) {
-        binding.liveStreamAWS.setOnClickListener {
-            val intent = Intent(this, cl)
-            startActivity(intent)
-        }
+        enableShowCaseButton(binding.liveStreamAWS, cl)
     }
-
     private fun <T> enableShowCaseButton(view: View, cl: Class<T>) {
         view.isEnabled = true
         view.setOnClickListener {
