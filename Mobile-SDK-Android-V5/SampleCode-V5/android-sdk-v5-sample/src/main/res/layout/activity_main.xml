@@ -129,9 +129,8 @@
                     android:text="@string/showcase"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
-
                 <Button
-                    android:id="@+id/liveStreamAWS"
+                    android:id="@+id/liveStreamAWSPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:elevation="10dp"
@@ -144,6 +143,21 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="PoC Stream URL / Phone"
+                    android:textColor="@color/selector_enable_button" />
+                <Button
+                    android:id="@+id/liveStreamAWSDrone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="PoC Stream URL / Drone"
                     android:textColor="@color/selector_enable_button" />
                 <Button
                     android:id="@+id/default_layout_button"

@@ -24,7 +24,8 @@ class DJIAircraftMainActivity : DJIMainActivity() {
 
         enableDefaultLayout(DefaultLayoutActivity::class.java)
         enableWidgetList(WidgetsActivity::class.java)
-        enableOpenStreamingButton(OpenStreamingActivity::class.java) // Added to enable the Open Camera button
+        enableOpenStreamingButtonDrone(OpenStreamingActivity::class.java) // Added to enable the Open Drone camera button
+        enableOpenStreamingButtonCamera(OpenCameraActivity::class.java) // Added to enable the Open Camera button
     }
 
     override fun prepareTestingToolsActivity() {

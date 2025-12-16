@@ -338,9 +338,15 @@ class LiveFragment : DJIFragment() {
     }
 
     private fun showSetLiveStreamRtmpConfigDialog() {
-        val factory = LayoutInflater.from(requireContext())
+
+        liveStreamVM.setRTMPConfig("rtmp://18.130.36.142:1935/demo/live")
+        startLive()
+
+        /*val factory = LayoutInflater.from(requireContext())
         val rtmpConfigView = factory.inflate(R.layout.dialog_livestream_rtmp_config_view, null)
         val etRtmpUrl = rtmpConfigView.findViewById<EditText>(R.id.et_livestream_rtmp_config)
+
+
         etRtmpUrl.setText(
             liveStreamVM.getRtmpUrl().toCharArray(),
             0,
@@ -372,6 +378,7 @@ class LiveFragment : DJIFragment() {
                 .create()
         }
         configDialog.show()
+        */
     }
 
     private fun showSetLiveStreamRtspConfigDialog() {
