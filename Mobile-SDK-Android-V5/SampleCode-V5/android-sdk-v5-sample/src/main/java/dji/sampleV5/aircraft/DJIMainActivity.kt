@@ -190,10 +190,6 @@ abstract class DJIMainActivity : AppCompatActivity() {
      * Enables a button to open the camera activity.
      * @param cl The class of the activity to open.
      */
-
-    fun <T> enableOpenStreamingButtonCamera(cl: Class<T>) {
-        enableShowCaseButton(binding.liveStreamAWSPhone, cl)
-    }
     fun <T> enableOpenStreamingButtonDrone(cl: Class<T>) {
         enableShowCaseButton(binding.liveStreamAWSDrone, cl)
     }
