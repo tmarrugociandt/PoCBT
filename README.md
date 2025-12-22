@@ -195,6 +195,11 @@ Ensure any SDK initialization that opens the camera uses this id and runs after 
 ## Where to put AIRCRAFT_API_KEY
 The project expects an `AIRCRAFT_API_KEY` Gradle property that is used by the sample app. By default this property is defined in `android-sdk-v5-as/gradle.properties` (this repository currently includes an example value there). The sample's `build.gradle` maps that property into a manifest placeholder:
 
+<img width="1600" height="720" alt="Screenshot_20251222_103832" src="https://github.com/user-attachments/assets/915709e1-a5fc-481e-a3bf-4668cb351b0e" />
+<img width="1600" height="720" alt="Screenshot_20251222_103845" src="https://github.com/user-attachments/assets/0baeb7b7-032a-47ad-a0bc-1d94120d2c18" />
+
+
+
 ```groovy
 // in android-sdk-v5-sample/build.gradle
 manifestPlaceholders["API_KEY"] = project.AIRCRAFT_API_KEY
