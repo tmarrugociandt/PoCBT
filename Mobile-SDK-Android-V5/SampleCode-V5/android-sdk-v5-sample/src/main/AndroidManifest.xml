@@ -38,6 +38,22 @@
             android:name=".OpenStreamingActivity"
             android:exported="false"
             android:theme="@style/full_screen_theme" />
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".poc.AWSPhoneActivity"
+            android:exported="false"
+            android:theme="@style/full_screen_theme" />
+
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".OpenStreamingYoutubeActivity"
+            android:exported="false"
+            android:theme="@style/full_screen_theme" />
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".poc.MainActivityYoutube"
+            android:exported="false"
+            android:theme="@style/full_screen_theme" />
 
         <!-- Google Maps API key -->
         <meta-data

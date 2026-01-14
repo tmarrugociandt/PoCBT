@@ -12,6 +12,7 @@ buildscript {
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
         // Agregar JitPack aquí
         maven { url JITPACK_MAVEN_URL }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.0'
@@ -27,6 +28,7 @@ allprojects {
         mavenCentral()
         maven { url KOTLIN_MAVEN }
         maven { url JITPACK_MAVEN_URL }
+        maven { url "https://jitpack.io" }
         flatDir {
             dirs new File(rootProject.projectDir.getAbsolutePath() + '/libs')
         }

@@ -130,4 +130,6 @@ dependencies {
     implementation deps.dom
     kapt deps.glidecompiler
     implementation deps.lynx
+    implementation "com.github.pedroSG94.RootEncoder:library:2.6.6"
+    implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtmp:2.0.0'
 }

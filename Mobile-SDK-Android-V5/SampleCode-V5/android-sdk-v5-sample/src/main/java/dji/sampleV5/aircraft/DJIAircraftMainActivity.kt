@@ -1,5 +1,6 @@
 package dji.sampleV5.aircraft
-
+import dji.sampleV5.aircraft.poc.AWSPhoneActivity
+import dji.sampleV5.aircraft.poc.MainActivityYoutube
 import dji.v5.common.utils.GeoidManager
 import dji.v5.ux.core.communication.DefaultGlobalPreferences
 import dji.v5.ux.core.communication.GlobalPreferencesManager
@@ -24,7 +25,11 @@ class DJIAircraftMainActivity : DJIMainActivity() {
 
         enableDefaultLayout(DefaultLayoutActivity::class.java)
         enableWidgetList(WidgetsActivity::class.java)
-        enableOpenStreamingButtonDrone(OpenStreamingActivity::class.java) // Added to enable the Open Drone camera button
+        enableOpenStreamingAWSDrone(OpenStreamingActivity::class.java) // Added to enable the Open Drone camera button
+        enableOpenStreamingAWSPhone(AWSPhoneActivity::class.java) // Added to enable the Open Drone camera button
+        enableOpenStreamingYoutubeDrone(OpenStreamingYoutubeActivity::class.java) // Added to enable the Open Drone camera button
+        enableOpenStreamingYoutubeCamera(MainActivityYoutube::class.java) // Added to enable the Open Drone camera button
+
     }
 
     override fun prepareTestingToolsActivity() {
