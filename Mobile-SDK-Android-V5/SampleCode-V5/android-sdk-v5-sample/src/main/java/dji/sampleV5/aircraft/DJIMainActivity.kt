@@ -202,7 +202,9 @@ abstract class DJIMainActivity : AppCompatActivity() {
     fun <T> enableOpenStreamingYoutubeCamera(cl: Class<T>) {
         enableShowCaseButton(binding.streamYoutubeCamera, cl)
     }
-
+    fun <T> enableOpenStreamingYoutubeCameraE2EE(cl: Class<T>) {
+        enableShowCaseButton(binding.streamYoutubeE2EE, cl)
+    }
 
     private fun <T> enableShowCaseButton(view: View, cl: Class<T>) {
         view.isEnabled = true

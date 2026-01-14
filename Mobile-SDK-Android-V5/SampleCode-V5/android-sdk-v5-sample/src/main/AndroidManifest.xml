@@ -55,6 +55,12 @@
             android:exported="false"
             android:theme="@style/full_screen_theme" />
 
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".poc.MainActivityYoutubeE2EE"
+            android:exported="false"
+            android:theme="@style/full_screen_theme" />
+
         <!-- Google Maps API key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
